@@ -1,0 +1,200 @@
+// Variables
+
+$black: #1d1d1d
+$grey: #6c6c6c
+$yellow: #ffc001
+
+// Global styles
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: "Futura"
+    font-weight: normal
+
+.flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+
+// Navigation
+.nav-wrapper
+    width: 1200px
+    height: 90px
+    position: absolute
+    top: 0
+    left: 0
+    display: flex
+    flex-direction: row
+
+.logo
+    font-size: 10px
+    background: $black
+    color: #ffffff
+    width: 240px
+    height: 100%
+    @extend .flex-center
+
+nav
+    display: flex
+    align-items: center
+    justify-content: space-around
+    width: 100%
+    background-color: #ffffff
+
+    a
+        color: $grey
+        text-decoration: none
+    
+    .active
+        color: $black
+
+// Gallery navigation
+
+.gallery-nav
+    width: 230px
+    height: 105px
+    position: absolute
+    bottom: 0
+    right: 0
+    display: flex
+    flex-direction: row
+
+    div
+        flex: 1
+        background-color: $yellow
+        @extend .flex-center
+
+        svg
+            height: 18px
+
+
+    #white-bg
+        background-color: #ffffff
+
+// Text Section
+.column-wrapper
+    display: flex
+    height: 100vh
+
+    section
+        display: flex
+
+.text-section
+    flex: 1
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+    padding-left: 110px
+
+    h1
+        font-size: 95px
+        width: 500px
+        margin-bottom: 100px
+
+    p
+        max-width: 400px
+        line-height: 25px
+        color: $grey
+        margin-bottom: 50px
+        letter-spacing: 1px
+
+    .details-btn
+        font-weight: bold
+        font-size: 16px
+        display: flex
+        align-items: center
+        letter-spacing: 1px
+
+        svg
+            height: 11px
+            margin-left: 10px
+
+// Image Section
+.image-section
+    flex: 1.5
+    background: url(https://minimalissimo.com/cms/wp-content/uploads/2017/11/fermo-unit-3.jpg)
+    background-size: cover
+    position: relative
+    z-index: -10
+
+.gallery-counter
+    position: absolute
+    bottom: 0
+    left: -450px
+    display: flex
+    flex-direction: row
+    align-items: flex-end
+
+    div
+        &:first-child
+            height: 80px
+            width: 300px
+            background-color: $yellow
+            color: $black
+            @extend .flex-center
+            font-weight: bold
+            letter-spacing: 1px
+        
+        &:last-child
+            height: 135px
+            width: 355px
+            background-color: $black
+            color: #ffffff
+            display: flex
+            align-items: center
+
+            h2
+                font-size: 70px
+                letter-spacing: 1px
+                margin: 0 50px 0 40px
+
+            div
+                height: 3px
+                width: 130px
+                background-color: $grey
+                display: flex
+
+
+                div
+                    height: 3px
+                    width: 30px
+                    background-color: #ffffff
+
+// Sidebar
+.sidebar-section
+    width: 115px
+    display: flex
+    flex-direction: column
+    
+.hamburger
+    height: 115px
+    width: 100%
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+
+    div
+        height: 3px
+        width: 30%
+        background-color: $black
+        margin-bottom: 5px
+
+#short
+    width: 25%
+
+.social
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 200px
+    width: 100%
+    align-items: center
+    margin-top: 200px 
+
+    a
+        writing-mode: vertical-rl
+        text-orientation: mixed
+        color: $grey
+        text-decoration: none
