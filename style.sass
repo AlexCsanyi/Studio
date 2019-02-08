@@ -1,7 +1,7 @@
 // Variables
 
 $black: #1d1d1d
-$grey: #6c6c6c
+$grey: #b1b1b1
 $yellow: #ffc001
 
 // Global styles
@@ -26,12 +26,13 @@ $yellow: #ffc001
     left: 0
     display: flex
     flex-direction: row
+    z-index: 1
 
 .logo
     font-size: 10px
     background: $black
     color: #ffffff
-    width: 240px
+    width: 230px
     height: 100%
     @extend .flex-center
 
@@ -45,9 +46,16 @@ nav
     a
         color: $grey
         text-decoration: none
+        display: flex
+        flex-direction: row
+        transition: color 1s ease
+
+        &:hover
+            color: $black
     
     .active
         color: $black
+        font-weight: 800
 
 // Gallery navigation
 
@@ -59,11 +67,13 @@ nav
     right: 0
     display: flex
     flex-direction: row
+    align-self: center
 
     div
         flex: 1
         background-color: $yellow
         @extend .flex-center
+        cursor: pointer
 
         svg
             height: 18px
@@ -105,8 +115,13 @@ nav
         display: flex
         align-items: center
         letter-spacing: 1px
+        cursor: pointer
+
+        &:hover svg
+            transform: rotate(405deg)
 
         svg
+            transition: all .6s ease
             height: 11px
             margin-left: 10px
 
@@ -116,7 +131,6 @@ nav
     background: url(https://minimalissimo.com/cms/wp-content/uploads/2017/11/fermo-unit-3.jpg)
     background-size: cover
     position: relative
-    z-index: -10
 
 .gallery-counter
     position: absolute
@@ -198,3 +212,14 @@ nav
         text-orientation: mixed
         color: $grey
         text-decoration: none
+        display: flex
+        flex-direction: row
+        transition: color 1s ease
+
+        &:first-child
+            &:hover
+                color: #4267B2
+        
+        &:last-child
+            &:hover
+                color: #08A0E9
