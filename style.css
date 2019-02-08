@@ -104,6 +104,11 @@ nav .active {
   cursor: pointer;
 }
 
+.gallery-nav div:hover {
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1);
+}
+
 .gallery-nav div svg {
   height: 18px;
 }
