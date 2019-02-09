@@ -17,3 +17,23 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";
 }
+
+let numberIndex = 1;
+showNumbers(numberIndex);
+
+// next and prev controls
+
+function plusNumbers(n) {
+    showNumbers(numberIndex += n);
+}
+
+function showNumbers(n) {
+    let i;
+    let numbers = document.getElementsByClassName("myNumbers");
+    if (n > numbers.length) {numberIndex = 1}
+    if (n < 1) {numberIndex = numbers.length}
+    for (i = 0; i < numbers.length; i++) {
+        numbers[i].style.display = "none";
+    }
+    numbers[numberIndex-1].style.display = "flex";
+}
