@@ -7,12 +7,14 @@
     <title>Studio</title>
     <!--Stylesheets-->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hamburger.css">
     <!-- Javascript -->
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
     <script defer src="animation.js"></script>
     <script defer src="function.js"></script>
     <script defer src="fetch.js"></script>
     <script defer src="gallery.js"></script>
+    <script defer src="hamburger.js"></script>
 </head>
 <body>
     <div class="nav-wrapper">
@@ -20,7 +22,8 @@
             <h1>STUDIO</h1>
         </div>
 
-        <nav>
+        <nav id="navigation">
+            <a id="close-btn" onclick="closeNav()">&times;</a>
             <a href="#" id="collections-link">
                 <div class="letter">C</div>
                 <div class="letter">o</div>
@@ -109,7 +112,7 @@
         </section>
 
         <section class="sidebar-section">
-            <div class="hamburger">
+            <div id="collapse-menu" class="hamburger" onclick="openNav()">
                 <div class="ham-line"></div>
                 <div class="ham-line" id="short"></div>
                 <div class="ham-line"></div>

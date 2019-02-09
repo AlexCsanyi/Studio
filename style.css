@@ -54,6 +54,15 @@ nav {
       justify-content: space-around;
   width: 100%;
   background-color: #ffffff;
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
+}
+
+nav #close-btn {
+  cursor: pointer;
+  color: #ffc001;
+  font-size: 45px;
+  font-weight: 300;
 }
 
 nav a {
@@ -273,7 +282,6 @@ nav .active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow: hidden;
 }
 
 .hamburger {
@@ -292,6 +300,8 @@ nav .active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+  visibility: hidden;
 }
 
 .hamburger div {
