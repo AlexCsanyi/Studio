@@ -193,45 +193,10 @@ nav .active {
   position: relative;
 }
 
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
 .image-section .slideshow-container img {
-  display: block;
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 2s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
 }
 
 .gallery-counter {
@@ -289,7 +254,13 @@ nav .active {
 
 .gallery-counter div:last-child div div {
   height: 3px;
-  width: 30px;
+  width: 44px;
+  background-color: #b1b1b1;
+}
+
+.gallery-counter div:last-child div .current {
+  height: 3px;
+  width: 43.3px;
   background-color: #ffffff;
 }
 
