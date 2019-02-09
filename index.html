@@ -11,6 +11,7 @@
     <script defer src="animation.js"></script>
     <script defer src="function.js"></script>
     <script defer src="fetch.js"></script>
+    <script defer src="gallery.js"></script>
 </head>
 <body>
     <div class="nav-wrapper">
@@ -76,12 +77,25 @@
         </section>
 
         <section class="image-section">
+
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="https://source.unsplash.com/A3FohRFYW2A/1200x990" alt="stylish keyboard on white table">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://source.unsplash.com/qRfMB-IOQjE/1200x990" alt="sofa in background and coffee table with stylish decor">
+                </div>
+                <div class="mySlides fade">
+                    <img src="https://source.unsplash.com/Dl6H4_nzBpE/1200x990" alt="white kitchen with plants">
+                </div>
+            </div>
+
             <div class="gallery-counter">
                 <div id="gallery-headline">
                     GALLERY
                 </div>
                 <div id="gallery-loader">
-                    <h2>02</h2>
+                    <h2 class="numbertext">01</h2>
                     <div class="loader">
                         <div class="loader-line"></div>
                     </div>
@@ -121,10 +135,10 @@
     </div>
 
     <div class="gallery-nav">
-        <div>
+        <div class="prev" onclick="plusSlides(-1)">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg>
         </div>
-        <div id="white-bg">
+        <div class="next" onclick="plusSlides(1)" id="white-bg">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
         </div>
     </div>
